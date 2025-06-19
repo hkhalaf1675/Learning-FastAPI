@@ -90,3 +90,11 @@ async def delete_post(id: int):
         "data": {},
         "code": 404
     }
+
+# Admin apis
+@app.get("/admin", description="admin endpoint", include_in_schema=False)
+async def get_admin():
+    return {
+        "message": "Hello Admin, From FastAPI P01",
+        "code": 200
+    }
