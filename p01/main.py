@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 
 app = FastAPI()
 
@@ -98,3 +99,6 @@ async def get_admin():
         "message": "Hello Admin, From FastAPI P01",
         "code": 200
     }
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8080)
